@@ -4,10 +4,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pytest = "==5.3.2"
+pytest = "==5.3"
+flake8 = "==3.7"
 
 [packages]
-requests = "==2.22.0"
+requests = "==2.22"
 
 [requires]
 python_version = "3.6"
