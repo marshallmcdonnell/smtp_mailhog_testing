@@ -15,7 +15,7 @@ jobs:
         docker build . --file Dockerfile --tag smtp-mailhog-testing:$(date +%s)
     - name: Lint with flake8
       run: |
-        docker run -tag smtp-mailhog-testing:$(date +%s) flake8
+        docker run -t smtp-mailhog-testing:$(date +%s) flake8
     - name: Test with pytest
       run: |
         docker-compose up
