@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Python SMTP testing w/ MailHog
 
 on: [push]
 
