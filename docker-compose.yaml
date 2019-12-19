@@ -1,0 +1,26 @@
+version: "3"
+services:
+  mail-server:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025
+    networks:
+      mail-net:
+        aliases:
+          - mailserver.ornl.gov
+  mail-client:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: pytest
+    networks:
+      mail-net:
+        aliases:
+          - mailclient.ornl.gov
+    depends_on:
+      - mail-server
+
+networks:
+  mail-net:
+    driver: bridge
