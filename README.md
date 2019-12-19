@@ -9,7 +9,9 @@ Working examples of testing a Python mail client using SMTP (using [smtplib](htt
 
 0) Install [docker-comopse](https://docs.docker.com/compose/install/) and [pipenv](https://pipenv.readthedocs.io/en/latest/)
 1) Install via: `pipenv install --dev`
-2) Run docker compose via: `docker-compose up`
+2) Spin up services: `docker-compose up`
+3) Run tests: `docker-compose run mail-client pytest`
+4) Spin down services: `docker-compose down`
 
 # Tutorial
 

@@ -13,7 +13,6 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    command: pytest
     networks:
       mail-net:
         aliases:

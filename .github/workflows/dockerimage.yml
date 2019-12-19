@@ -18,4 +18,6 @@ jobs:
         docker run -t smtp-mailhog-testing flake8
     - name: Test with pytest
       run: |
-        docker-compose up
+        docker-compose up -d --build
+        docker-compose run mail-client pytest
+        docker-compose down
