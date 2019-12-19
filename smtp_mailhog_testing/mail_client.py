@@ -2,7 +2,7 @@ import argparse
 import smtplib
 
 
-def send_mail(sender_email, receiver_email, message, url="localhost", port=1025):
+def send_mail(sender_email, receiver_email, message, url, port=1025):
     with smtplib.SMTP(url, port) as server:
         server.sendmail(sender_email, receiver_email, message)
 
@@ -19,4 +19,4 @@ if __name__ == "__main__":
 
     This message is sent from Python."""
 
-    send_mail(sender_email, receiver_email, message, url=args.url)
+    send_mail(sender_email, receiver_email, message, args.url)

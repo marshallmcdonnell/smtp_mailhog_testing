@@ -13,5 +13,3 @@ def test_send_email(url):
     message = "Test"
 
     mail_client.send_mail(sender_email, receiver_email, message, url=url)
-
-    
